@@ -1,29 +1,26 @@
-# Shimon Esterkin — personal landing page
+# Shimon Esterkin — business card
 
-Standalone digital business card / link-in-bio page for professional networking.
+Minimal personal landing page for professional networking.
 
-**Not related to deutsch-app.** This site is meant to be shared from Instagram, LinkedIn, résumés, and messages.
+**Live:** https://blackhebrewisraeli.github.io/
 
-## Shareable URL (after GitHub Pages is enabled)
+## What it shows
 
-`https://blackhebrewisraeli.github.io/`
+- Name and professional orientation
+- Current status (studies + open to roles)
+- Credentials
+- Languages
+- LinkedIn / GitHub contact
 
-## Contents
+Intentionally **not** a portfolio. No project gallery.
 
-- Full-bleed hero with name, role, and primary CTAs
-- Focus + stack
-- Selected public projects (Assembler, Transportation System, eBPF lab, Skills Journey)
-- Contact via LinkedIn or GitHub issue (no public phone/email)
+## Photo
 
-## Local preview
+`assets/portrait.jpg` is temporary. Replace with a preferred professional photo when ready, then push to `main`.
 
-Open `index.html` in a browser, or:
+## Publish
 
 ```bash
-python3 -m http.server 4173
-# then visit http://localhost:4173
+export GH_TOKEN=ghp_xxx
+./publish.sh
 ```
-
-## Deploy
-
-This repository is published with **GitHub Pages** from the `main` branch (`/` root).
