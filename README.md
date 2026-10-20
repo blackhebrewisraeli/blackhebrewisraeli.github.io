@@ -1,26 +1,30 @@
-# Shimon Esterkin — business card
+# Shimi Esterkin — Portfolio
 
-Minimal personal landing page for professional networking.
+A responsive, dark Bento Grid portfolio for **Shimi Esterkin**, Computer Science student at the Open University of Israel, focused on systems programming and full-stack products.
 
-**Live:** https://blackhebrewisraeli.github.io/
+**Live site:** https://blackhebrewisraeli.github.io/
 
-## What it shows
+## What the site includes
 
-- Name and professional orientation
-- Current status (studies + open to roles)
-- Credentials
-- Languages
-- LinkedIn / GitHub contact
+- Intro and social links: GitHub, LinkedIn, X, Instagram
+- Selected low-level work: C-Assembler-Simulator, eBPF/BCC Tracing Lab, and xv6 Docker Environment
+- Product cards for Sprachschule-app and ZeroChart, with live demos and source repositories
+- Languages and a dynamically hosted GitHub statistics card
+- A personal travel/music/sociology section
 
-Intentionally **not** a portfolio. No project gallery.
+## Tech and assets
 
-## Photo
+- Semantic HTML with responsive CSS; Tailwind CDN is available for utility styling
+- Local images in `assets/profile.webp` and `assets/prague.webp`
+- Google Fonts and a third-party GitHub Readme Stats image are loaded remotely; the rest of the page is static and does not require a build step.
 
-`assets/portrait.jpg` is temporary. Replace with a preferred professional photo when ready, then push to `main`.
+## Deploy
 
-## Publish
+GitHub Pages serves the static site from the repository's configured publishing source. Changes merged to `main` are published according to the Pages build/deployment settings.
 
-```bash
-export GH_TOKEN=ghp_xxx
-./publish.sh
-```
+## Social links
+
+- GitHub: https://github.com/blackhebrewisraeli
+- LinkedIn: https://www.linkedin.com/in/shimon-esterkin/
+- X: https://x.com/hebrewisraeli18
+- Instagram: https://www.instagram.com/blackhebrewisraeli/
