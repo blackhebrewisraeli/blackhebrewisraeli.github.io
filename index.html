@@ -1,104 +1,204 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shimon Esterkin</title>
-    <meta
-      name="description"
-      content="Shimon Esterkin — CS student, backend & systems. Open University of Israel. Open to junior roles."
-    />
-    <meta property="og:title" content="Shimon Esterkin" />
-    <meta
-      property="og:description"
-      content="Backend & systems · CS student · Open to junior roles"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/portrait.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="assets/avatar.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Figtree:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip" href="#card">Skip to content</a>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shimi Esterkin | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gray: {
+                            850: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body { 
+            background-color: #030712; /* Zinc-950 */
+            color: #f3f4f6; 
+        }
+        
+        /* Bento Card Base & Hover Effects */
+        .bento-card {
+            background: linear-gradient(145deg, #111827, #0f1420);
+            border: 1px solid #1f2937;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            border-color: #374151;
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 flex justify-center items-center">
+    
+    <!-- Bento Grid Container -->
+    <div class="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 auto-rows-[minmax(200px,auto)]">
 
-    <div class="stage">
-      <div class="stage__media" aria-hidden="true">
-        <!-- Temporary portrait — replace when you have a preferred professional photo -->
-        <img
-          class="stage__image"
-          src="assets/portrait.jpg"
-          alt=""
-          width="1280"
-          height="1600"
-        />
-        <div class="stage__veil"></div>
-      </div>
-
-      <main class="card" id="card">
-        <p class="eyebrow reveal">Ashkelon, Israel</p>
-        <h1 class="brand reveal">Shimon Esterkin</h1>
-        <p class="role reveal">Backend &amp; systems · CS student</p>
-        <p class="lede reveal">
-          Building toward junior software roles — focused on backend services,
-          systems programming, and clean engineering habits.
-        </p>
-
-        <dl class="facts reveal">
-          <div>
-            <dt>Now</dt>
-            <dd>
-              B.Sc. Computer Science, Open University of Israel · open to junior
-              developer, backend, and QA automation roles
-            </dd>
-          </div>
-          <div>
-            <dt>Orientation</dt>
-            <dd>Java · Python · C · SQL · Docker · Linux · GitHub Actions</dd>
-          </div>
-          <div>
-            <dt>Credentials</dt>
-            <dd>
-              GitHub Foundations — in progress
-              <span class="sep">·</span>
-              Python Programming (Udemy)
-              <span class="sep">·</span>
-              Java Bootcamp (Udemy)
-            </dd>
-          </div>
-          <div>
-            <dt>Languages</dt>
-            <dd>Hebrew · Russian · English (fluent) · German · Portuguese (intermediate)</dd>
-          </div>
-        </dl>
-
-        <div class="cta reveal" role="group" aria-label="Contact">
-          <a
-            class="btn btn--primary"
-            href="https://www.linkedin.com/in/shimon-esterkin/"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
-          <a
-            class="btn btn--ghost"
-            href="https://github.com/blackhebrewisraeli"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
+        <!-- 1. Hero Card -->
+        <div class="bento-card col-span-1 md:col-span-2 lg:col-span-2 row-span-2 rounded-3xl p-8 flex flex-col justify-between">
+            <div>
+                <!-- PLACEHOLDER: Profile Picture. Replace src with your image URL -->
+                <div class="w-28 h-28 rounded-full bg-gray-800 border-2 border-gray-700 overflow-hidden mb-6 shadow-lg">
+                    <img src="https://via.placeholder.com/150/1f2937/ffffff?text=Profile" alt="Shimi Esterkin" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-4xl font-bold mb-2 tracking-tight">Shimi Esterkin</h1>
+                <h2 class="text-gray-400 text-lg font-medium mb-4">CS Student @ OpenU | Systems & Full-Stack Developer</h2>
+                <p class="text-gray-500 text-sm leading-relaxed max-w-md">
+                    Bridging the gap between low-level system architecture and modern scalable web products. 
+                </p>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex gap-4 mt-8">
+                <a href="https://github.com/blackhebrewisraeli" target="_blank" class="w-12 h-12 rounded-full bg-gray-800/80 flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors border border-gray-700">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="#" target="_blank" class="w-12 h-12 rounded-full bg-gray-800/80 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-colors border border-gray-700">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://x.com/hebrewisraeli18" target="_blank" class="w-12 h-12 rounded-full bg-gray-800/80 flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors border border-gray-700">
+                    <i class="fab fa-x-twitter text-xl"></i>
+                </a>
+                <a href="#" target="_blank" class="w-12 h-12 rounded-full bg-gray-800/80 flex items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all border border-gray-700">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
         </div>
 
-        <p class="footnote reveal">
-          Prefer LinkedIn for professional contact. No public phone or email.
-        </p>
-      </main>
+        <!-- 2. Core Systems & Low-Level -->
+        <div class="bento-card col-span-1 md:col-span-1 lg:col-span-2 rounded-3xl p-6 flex flex-col relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl -mr-10 -mt-10"></div>
+            <div class="flex items-center gap-3 mb-5 relative z-10">
+                <i class="fas fa-microchip text-emerald-400 text-xl"></i>
+                <h3 class="text-xl font-bold tracking-wide">Core Systems</h3>
+            </div>
+            <ul class="space-y-4 flex-1 relative z-10">
+                <li class="group">
+                    <a href="https://github.com/blackhebrewisraeli/C-Assembler-Simulator" target="_blank" class="block">
+                        <h4 class="font-semibold text-gray-200 group-hover:text-emerald-400 transition-colors">C-Assembler-Simulator</h4>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="text-[11px] font-medium bg-gray-800/80 text-gray-300 px-2.5 py-1 rounded-md border border-gray-700">C</span>
+                            <span class="text-[11px] font-medium bg-gray-800/80 text-gray-300 px-2.5 py-1 rounded-md border border-gray-700">Assembly</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="group">
+                    <a href="https://github.com/blackhebrewisraeli/ebpf-bcc-tracing-lab" target="_blank" class="block">
+                        <h4 class="font-semibold text-gray-200 group-hover:text-emerald-400 transition-colors">ebpf-bcc-tracing-lab</h4>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="text-[11px] font-medium bg-gray-800/80 text-gray-300 px-2.5 py-1 rounded-md border border-gray-700">Linux Kernel</span>
+                            <span class="text-[11px] font-medium bg-gray-800/80 text-gray-300 px-2.5 py-1 rounded-md border border-gray-700">eBPF</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="group">
+                    <a href="https://github.com/blackhebrewisraeli/xv6-docker-environment" target="_blank" class="block">
+                        <h4 class="font-semibold text-gray-200 group-hover:text-emerald-400 transition-colors">xv6-docker-environment</h4>
+                        <div class="flex flex-wrap gap-2 mt-2">
+                            <span class="text-[11px] font-medium bg-gray-800/80 text-gray-300 px-2.5 py-1 rounded-md border border-gray-700">Docker</span>
+                            <span class="text-[11px] font-medium bg-gray-800/80 text-gray-300 px-2.5 py-1 rounded-md border border-gray-700">OS</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 3. Full-Stack & Products -->
+        <div class="bento-card col-span-1 md:col-span-2 lg:col-span-2 rounded-3xl p-6 flex flex-col relative overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl -mr-10 -mb-10"></div>
+            <div class="flex items-center gap-3 mb-5 relative z-10">
+                <i class="fas fa-layer-group text-blue-400 text-xl"></i>
+                <h3 class="text-xl font-bold tracking-wide">Full-Stack & Products</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full relative z-10">
+                <!-- Project 1 -->
+                <div class="bg-gray-900/50 border border-gray-800 p-5 rounded-2xl flex flex-col justify-between hover:border-gray-700 transition">
+                    <div>
+                        <h4 class="font-bold text-blue-300 mb-1">Sprachschule-app</h4>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Deutsch Sprachschule learning platform.</p>
+                    </div>
+                    <div class="flex gap-3 text-xs font-medium">
+                        <!-- Update Live Demo Link Here -->
+                        <a href="#" class="flex items-center text-gray-300 hover:text-white transition"><i class="fas fa-external-link-alt mr-1.5"></i>Demo</a>
+                        <a href="https://github.com/blackhebrewisraeli/sprachschule-app" target="_blank" class="flex items-center text-gray-300 hover:text-white transition"><i class="fab fa-github mr-1.5"></i>Repo</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-900/50 border border-gray-800 p-5 rounded-2xl flex flex-col justify-between hover:border-gray-700 transition">
+                    <div>
+                        <h4 class="font-bold text-blue-300 mb-1">ZeroChart</h4>
+                        <p class="text-xs text-gray-400 mb-4 leading-relaxed">Modern data visualization & charting.</p>
+                    </div>
+                    <div class="flex gap-3 text-xs font-medium">
+                        <!-- Update Links Here -->
+                        <a href="#" class="flex items-center text-gray-300 hover:text-white transition"><i class="fas fa-external-link-alt mr-1.5"></i>Demo</a>
+                        <a href="#" class="flex items-center text-gray-300 hover:text-white transition"><i class="fab fa-github mr-1.5"></i>Repo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Languages & Stats -->
+        <div class="bento-card col-span-1 md:col-span-1 lg:col-span-2 rounded-3xl p-6 flex flex-col justify-between">
+            <div class="mb-6">
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                    <i class="fas fa-globe text-indigo-400"></i> Languages
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 bg-indigo-900/20 text-indigo-300 rounded-lg text-xs font-semibold border border-indigo-800/40">Hebrew</span>
+                    <span class="px-3 py-1.5 bg-indigo-900/20 text-indigo-300 rounded-lg text-xs font-semibold border border-indigo-800/40">English</span>
+                    <span class="px-3 py-1.5 bg-indigo-900/20 text-indigo-300 rounded-lg text-xs font-semibold border border-indigo-800/40">Russian</span>
+                    <span class="px-3 py-1.5 bg-indigo-900/20 text-indigo-300 rounded-lg text-xs font-semibold border border-indigo-800/40">German</span>
+                    <span class="px-3 py-1.5 bg-indigo-900/20 text-indigo-300 rounded-lg text-xs font-semibold border border-indigo-800/40">Portuguese</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-2 flex items-center gap-2">
+                    <i class="fas fa-chart-pie text-purple-400"></i> GitHub Stats
+                </h3>
+                <!-- Dynamic GitHub Stats (Vercel API) -->
+                <div class="bg-gray-900/40 rounded-xl p-2 border border-gray-800/50 flex justify-center">
+                    <img src="https://github-readme-stats.vercel.app/api?username=blackhebrewisraeli&theme=transparent&hide_border=true&title_color=a855f7&text_color=9ca3af&icon_color=a855f7&show_icons=true" alt="GitHub Stats" class="w-full h-auto max-w-sm drop-shadow-md">
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Personal Vibe / Lifestyle Card -->
+        <div class="bento-card col-span-1 md:col-span-2 lg:col-span-2 rounded-3xl overflow-hidden relative group min-h-[220px]">
+            <!-- PLACEHOLDER: Atmospheric Background Image. Replace src with your image (e.g. concert, hostel, abstract) -->
+            <img src="https://via.placeholder.com/800x400/111827/374151?text=Atmospheric+Image" alt="Vibe Background" class="w-full h-full object-cover absolute inset-0 opacity-30 group-hover:opacity-20 group-hover:scale-105 transition-all duration-500 ease-in-out">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-gray-900/80 to-transparent"></div>
+            
+            <div class="relative h-full p-6 flex flex-col justify-end">
+                <i class="fas fa-quote-left text-gray-600 text-3xl mb-3"></i>
+                <p class="text-gray-300 font-medium text-base md:text-lg leading-relaxed italic drop-shadow-md">
+                    Between debugging kernels and shipping code, you'll find me analyzing sociological paradigms of historical consciousness, surviving metal mosh pits across Europe, and navigating the global hostel route.
+                </p>
+            </div>
+        </div>
+
     </div>
 
-    <script src="script.js" defer></script>
-  </body>
+</body>
 </html>
