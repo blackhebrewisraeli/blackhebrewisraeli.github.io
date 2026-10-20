@@ -14,13 +14,16 @@ A responsive Bento Grid portfolio for **Shimi Esterkin**, Computer Science stude
 
 ## Photo assets
 
-The hero uses `assets/tbilisi-background.webp`, and the personal story card uses `assets/prague-background.webp`.
+The hero uses `assets/tbilisi-background.webp`. The personal story card combines a Prague portrait with two travel photographs:
+- `assets/prague-background.webp`
+- `assets/warsaw-palace.jpeg`
+- `assets/munster-streets.jpeg`
 
 The site-wide atmospheric photo layer uses:
 - `assets/cave-machpelah.webp`
 - `assets/israel-flags.webp`
 
-The two atmospheric photos span the viewport behind the Bento cards with stronger visibility, directional gradient masks, and translucent card surfaces. The original photo assets are stored in `assets/`.
+The two atmospheric photos span the viewport behind the Bento cards with stronger visibility, directional gradient masks, and translucent card surfaces. The compact personal collage adds a wider sense of place without turning the page into a gallery. The original photo assets are stored in `assets/`.
 
 ## Technology
 
