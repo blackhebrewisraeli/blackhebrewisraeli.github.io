@@ -1,26 +1,32 @@
 # Shimi Esterkin — Portfolio
 
-A responsive, dark Bento Grid portfolio for **Shimi Esterkin**, Computer Science student at the Open University of Israel, focused on systems programming and full-stack products.
+A responsive Bento Grid portfolio for **Shimi Esterkin**, Computer Science student at the Open University of Israel, combining systems engineering, full-stack projects, and personal photography.
 
 **Live site:** https://blackhebrewisraeli.github.io/
 
-## What the site includes
+## Site sections
 
-- Intro and social links: GitHub, LinkedIn, X, Instagram
-- Selected low-level work: C-Assembler-Simulator, eBPF/BCC Tracing Lab, and xv6 Docker Environment
-- Product cards for Sprachschule-app and ZeroChart, with live demos and source repositories
-- Languages and a dynamically hosted GitHub statistics card
-- A personal travel/music/sociology section
+- Profile introduction and links to GitHub, LinkedIn, X, and Instagram
+- Core Systems projects: C-Assembler-Simulator, eBPF/BCC Tracing Lab, and xv6 Docker Environment
+- Product cards for Sprachschule-app and ZeroChart, including demos and repositories
+- Languages and a hosted GitHub statistics card
+- Personal travel, music, sociology, and lifestyle section
 
-## Tech and assets
+## Photo assets
 
-- Semantic HTML with responsive CSS; Tailwind CDN is available for utility styling
-- Local images in `assets/profile.webp` and `assets/prague.webp`
-- Google Fonts and a third-party GitHub Readme Stats image are loaded remotely; the rest of the page is static and does not require a build step.
+The hero uses `assets/tbilisi-background.webp`, and the personal story card uses `assets/prague-background.webp`.
 
-## Deploy
+The page-wide atmospheric photo layer also references these two assets:
+- `assets/cave-machpelah.webp`
+- `assets/israel-flags.webp`
 
-GitHub Pages serves the static site from the repository's configured publishing source. Changes merged to `main` are published according to the Pages build/deployment settings.
+Add the two latter files to the repository's `assets/` folder from the companion `portfolio-background-assets.zip` archive before merging the background-atmosphere change. They retain the source photographs' pixel dimensions and are compressed as high-quality WebP.
+
+## Technology
+
+- Static HTML and responsive CSS; no build step is required
+- Google Fonts and the GitHub Readme Stats card load from third-party services
+- Accessible link labels, keyboard focus states, and reduced-motion handling
 
 ## Social links
 
@@ -28,3 +34,7 @@ GitHub Pages serves the static site from the repository's configured publishing 
 - LinkedIn: https://www.linkedin.com/in/shimon-esterkin/
 - X: https://x.com/hebrewisraeli18
 - Instagram: https://www.instagram.com/blackhebrewisraeli/
+
+## Deploy
+
+GitHub Pages publishes the configured source branch according to the repository's Pages settings.
