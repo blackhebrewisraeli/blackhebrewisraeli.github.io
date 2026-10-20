@@ -6,10 +6,10 @@ A responsive Bento Grid portfolio for **Shimi Esterkin**, Computer Science stude
 
 ## Site sections
 
-- Profile introduction and links to GitHub, LinkedIn, X, and Instagram
+- Profile introduction, a direct email link, and links to GitHub, LinkedIn, X, and Instagram
 - Core Systems projects: C-Assembler-Simulator, eBPF/BCC Tracing Lab, and xv6 Docker Environment
 - Product cards for Sprachschule-app and ZeroChart, including demos and repositories
-- Languages and a hosted GitHub statistics card
+- A "What I bring" card: systems, products, and languages & perspective
 - Personal travel, music, sociology, and lifestyle section
 
 ## Photo assets
@@ -23,12 +23,12 @@ The site-wide atmospheric photo layer uses:
 - `assets/cave-machpelah.webp`
 - `assets/israel-flags.webp`
 
-The two atmospheric photos span the viewport behind the Bento cards with stronger visibility, directional gradient masks, and translucent card surfaces. The compact personal collage adds a wider sense of place without turning the page into a gallery. The original photo assets are stored in `assets/`.
+The two atmospheric photos span the viewport behind the Bento cards as a quiet layer with directional gradient masks and translucent card surfaces. The compact personal collage carries the photography, so the background stays in the back. The original photo assets are stored in `assets/`.
 
 ## Technology
 
 - Static HTML with responsive CSS; no build step is required
-- Google Fonts and the GitHub Readme Stats card load from third-party services
+- Google Fonts is the only third-party service loaded
 - Accessible link labels, keyboard focus states, and reduced-motion handling
 
 ## Social links
