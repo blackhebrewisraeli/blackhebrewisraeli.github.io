@@ -10,7 +10,7 @@ A responsive Bento Grid portfolio for **Shimi Esterkin**, Computer Science stude
 - Core Systems projects: C-Assembler-Simulator, eBPF/BCC Tracing Lab, and xv6 Docker Environment
 - Product cards for Sprachschule-app and ZeroChart, including demos and repositories
 - A "What I bring" card: systems, products, and languages & perspective
-- Certifications (Anthropic Claude Academy, Udemy, Israeli Ministry of Foreign Affairs & IMUNA), each linked to its verification page where one exists
+- Licenses & certifications shown the way LinkedIn presents them: issuer, issue date, credential ID, skills, and a "Show credential" link to each public verification page
 - Personal travel, music, sociology, and lifestyle section
 
 ## Photo assets
@@ -24,7 +24,7 @@ The site-wide atmospheric photo layer uses:
 - `assets/cave-machpelah.webp`
 - `assets/israel-flags.webp`
 
-The two atmospheric photos span the viewport behind the Bento cards as a quiet layer with directional gradient masks and translucent card surfaces. The compact personal collage carries the photography, so the background stays in the back. The original photo assets are stored in `assets/`.
+The two atmospheric photos span the viewport behind the Bento cards as a quiet layer with directional gradient masks and translucent card surfaces. The compact personal collage (sized by the story text, not by the portrait photos) carries the photography, so the background stays in the back. The original photo assets are stored in `assets/`.
 
 ## Technology
 
