@@ -10,6 +10,7 @@ A responsive Bento Grid portfolio for **Shimi Esterkin**, Computer Science stude
 - Core Systems projects: C-Assembler-Simulator, eBPF/BCC Tracing Lab, and xv6 Docker Environment
 - Product cards for Sprachschule-app and ZeroChart, including demos and repositories
 - A "What I bring" card: systems, products, and languages & perspective
+- Certifications (Anthropic Claude Academy, Udemy, Israeli Ministry of Foreign Affairs & IMUNA), each linked to its verification page where one exists
 - Personal travel, music, sociology, and lifestyle section
 
 ## Photo assets
