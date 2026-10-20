@@ -16,11 +16,11 @@ A responsive Bento Grid portfolio for **Shimi Esterkin**, Computer Science stude
 
 The hero uses `assets/tbilisi-background.webp`, and the personal story card uses `assets/prague-background.webp`.
 
-The page-wide atmospheric photo layer uses these local assets:
+The site-wide atmospheric photo layer uses:
 - `assets/cave-machpelah.webp`
 - `assets/israel-flags.webp`
 
-All four photo assets are already in the repository's `assets/` folder. The two atmospheric photos appear behind the page cards with responsive placement, muted color treatment, and gradient masking to preserve text legibility.
+The two atmospheric photos span the viewport behind the Bento cards with stronger visibility, directional gradient masks, and translucent card surfaces. The original photo assets are stored in `assets/`.
 
 ## Technology
 
