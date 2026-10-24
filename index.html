@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0d1110">
+  <meta name="theme-color" content="#0a1020">
   <meta name="description" content="Shimi Esterkin — Computer Science student at the Open University of Israel, interested in systems programming and full-stack products.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Shimi Esterkin — Systems & Full-Stack Developer">
@@ -15,129 +15,120 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--bg:#0d1110;--panel:#151b19;--panel-soft:#19211e;--line:rgba(220,213,193,.15);--line-strong:rgba(220,213,193,.25);--text:#f2efe7;--muted:#b5b4aa;--subtle:#858b81;--accent:#c8a16b;--accent-bright:#e3c18e;--olive:#a8b39b;--mono:'DM Mono',monospace;--sans:Manrope,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+    :root{color-scheme:dark;--bg:#080d18;--panel:#111827;--panel-soft:#151e30;--line:rgba(190,205,232,.14);--line-strong:rgba(190,205,232,.28);--text:#f7f8fb;--muted:#b5bfd1;--subtle:#7f8da6;--accent:#79a8ff;--accent-bright:#a7c5ff;--olive:#9eb7e3;--mono:'DM Mono',monospace;--sans:Manrope,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:24px}
     body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 var(--sans)}
     a{color:inherit;text-decoration:none}
     a:focus-visible{outline:2px solid var(--accent-bright);outline-offset:4px}
-    .ambient{position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 9% 0%,rgba(133,151,119,.12),transparent 32%),radial-gradient(ellipse at 100% 15%,rgba(155,118,74,.12),transparent 32%),var(--bg)}
-    .texture{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.07;background-image:linear-gradient(rgba(222,215,195,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(222,215,195,.045) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,#000,transparent 88%)}
+    .ambient{position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 8% 0%,rgba(70,111,190,.17),transparent 34%),radial-gradient(ellipse at 100% 18%,rgba(38,76,148,.18),transparent 34%),var(--bg)}
+    .texture{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;background-image:linear-gradient(rgba(190,205,232,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(190,205,232,.05) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,#000,transparent 88%)}
     .photo-atmosphere{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
-    .photo-atmosphere__layer{position:absolute;display:block;background-size:cover;background-repeat:no-repeat;filter:saturate(.72) contrast(1.02) brightness(.91)}
-    .photo-atmosphere__layer--cave{left:-2vw;top:0;width:53vw;height:100vh;opacity:.46;background-image:linear-gradient(145deg,rgba(13,17,16,.13),rgba(13,17,16,.25)),url('assets/cave-machpelah.webp');background-position:center 55%;mask-image:linear-gradient(90deg,rgba(0,0,0,.98) 0%,rgba(0,0,0,.92) 68%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.98) 0%,rgba(0,0,0,.92) 68%,transparent 100%)}
-    .photo-atmosphere__layer--flags{right:0;bottom:0;width:48vw;height:100vh;opacity:.40;background-image:linear-gradient(155deg,rgba(13,17,16,.12),rgba(13,17,16,.27)),url('assets/israel-flags.webp');background-position:center 42%;mask-image:linear-gradient(270deg,rgba(0,0,0,.98) 0%,rgba(0,0,0,.90) 68%,transparent 100%);-webkit-mask-image:linear-gradient(270deg,rgba(0,0,0,.98) 0%,rgba(0,0,0,.90) 68%,transparent 100%)}
+    .photo-atmosphere__layer{position:absolute;display:block;background-size:cover;background-repeat:no-repeat;filter:saturate(.54) contrast(1.08) brightness(.67)}
+    .photo-atmosphere__layer--cave{left:-2vw;top:0;width:55vw;height:100vh;opacity:.34;background-image:linear-gradient(145deg,rgba(8,13,24,.12),rgba(8,13,24,.46)),url('assets/cave-machpelah.webp');background-position:center 55%;mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.78) 66%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.78) 66%,transparent 100%)}
+    .photo-atmosphere__layer--flags{right:0;bottom:0;width:50vw;height:100vh;opacity:.28;background-image:linear-gradient(155deg,rgba(8,13,24,.18),rgba(8,13,24,.48)),url('assets/israel-flags.webp');background-position:center 42%;mask-image:linear-gradient(270deg,#000 0%,rgba(0,0,0,.76) 66%,transparent 100%);-webkit-mask-image:linear-gradient(270deg,#000 0%,rgba(0,0,0,.76) 66%,transparent 100%)}
 
     .shell{position:relative;z-index:2;width:min(1440px,calc(100% - 48px));margin:0 auto}
     .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0 21px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}
-    .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(200,161,107,.5);border-radius:13px;background:linear-gradient(145deg,#dfc49a,#ad8250);color:#171612;font:500 12px var(--mono);letter-spacing:-.08em}
+    .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(121,168,255,.55);border-radius:13px;background:linear-gradient(145deg,#b7d0ff,#6c9ef9);color:#071021;font:500 12px var(--mono);letter-spacing:-.08em}
     .brand-label{font-size:13px;letter-spacing:.055em}.brand-label span{color:var(--subtle);font-weight:500}
-    .nav{display:flex;align-items:center;gap:25px;color:#c4c2b8;font-size:11px;font-weight:800}
+    .nav{display:flex;align-items:center;gap:25px;color:#bec8db;font-size:11px;font-weight:800}
     .nav a:hover{color:var(--accent-bright)}
-    .nav-cta{padding:10px 15px;border:1px solid rgba(200,161,107,.42);border-radius:999px;background:rgba(200,161,107,.07);color:var(--accent-bright)!important}
+    .nav-cta{padding:10px 15px;border:1px solid rgba(121,168,255,.42);border-radius:999px;background:rgba(121,168,255,.08);color:var(--accent-bright)!important}
     .bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;padding-bottom:24px}
-    .card{position:relative;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,rgba(23,30,27,.70),rgba(17,23,21,.75));backdrop-filter:blur(4px);box-shadow:0 18px 55px rgba(0,0,0,.16);transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+    .card{position:relative;min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,rgba(18,27,44,.84),rgba(10,16,29,.88));backdrop-filter:blur(10px);box-shadow:0 18px 55px rgba(0,0,0,.22);transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
     .card:hover{border-color:var(--line-strong);box-shadow:0 25px 70px rgba(0,0,0,.23);transform:translateY(-2px)}
     .hero{grid-column:span 7;min-height:460px;display:flex;align-items:stretch;padding:34px}
     .hero-photo{position:absolute;inset:0 0 0 auto;width:54%;height:100%;object-fit:cover;object-position:center 42%;}
-    .hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(20,27,24,.86) 0%,rgba(20,27,24,.82) 30%,rgba(20,27,24,.65) 46%,rgba(20,27,24,.28) 69%,rgba(13,17,16,.08) 100%),linear-gradient(0deg,rgba(13,17,16,.68) 0%,transparent 40%)}
+    .hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(11,18,32,.94) 0%,rgba(11,18,32,.89) 30%,rgba(11,18,32,.70) 48%,rgba(11,18,32,.27) 72%,rgba(8,13,24,.06) 100%),linear-gradient(0deg,rgba(8,13,24,.72) 0%,transparent 44%)}
     .hero-copy{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;width:67%;min-width:0}
     .eyebrow{display:flex;align-items:center;gap:9px;color:var(--accent-bright);font:500 10px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
     .eyebrow::before{content:"";width:18px;height:1px;background:currentColor}
-    .availability{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid rgba(200,161,107,.31);border-radius:999px;background:rgba(13,17,16,.48);color:#e1c69b;font:500 9px var(--mono);letter-spacing:.06em}
+    .availability{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid rgba(121,168,255,.31);border-radius:999px;background:rgba(13,17,16,.48);color:#cfe0ff;font:500 9px var(--mono);letter-spacing:.06em}
     .status-dot{width:6px;height:6px;border-radius:50%;background:var(--accent-bright)}
     h1{margin:21px 0 0;font-size:clamp(43px,5vw,72px);font-weight:800;line-height:.99;letter-spacing:-.075em}
     .surname{color:var(--accent-bright)}
     .hero-role{margin:17px 0 0;font-size:clamp(14px,1.5vw,19px);font-weight:800;line-height:1.55;color:#efeee8;letter-spacing:-.025em}
     .hero-role span{color:var(--accent-bright)}
-    .hero-lede{max-width:480px;margin:13px 0 0;color:#c6c5bb;font-size:12px;line-height:1.9}
+    .hero-lede{max-width:480px;margin:13px 0 0;color:#c6d0e0;font-size:12px;line-height:1.9}
     .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
     .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 14px;border-radius:11px;font-size:10px;font-weight:800;transition:transform .2s ease,background .2s ease,border-color .2s ease}
     .button:hover{transform:translateY(-2px)}
-    .button-primary{background:var(--accent-bright);color:#1b1914;box-shadow:0 8px 24px rgba(200,161,107,.12)}
-    .button-primary:hover{background:#f0d3a5}
-    .button-secondary{border:1px solid rgba(226,224,209,.22);background:rgba(15,20,18,.56);color:#efeee8}
-    .button-secondary:hover{border-color:rgba(226,224,209,.42)}
+    .button-primary{background:var(--accent-bright);color:#1b1914;box-shadow:0 8px 24px rgba(121,168,255,.12)}
+    .button-primary:hover{background:#c6d9ff}
+    .button-secondary{border:1px solid rgba(190,205,232,.22);background:rgba(15,20,18,.56);color:#efeee8}
+    .button-secondary:hover{border-color:rgba(190,205,232,.42)}
     .socials{display:flex;gap:8px;margin-top:auto;padding-top:24px}
-    .social{display:grid;place-items:center;width:37px;height:37px;border:1px solid rgba(222,215,195,.19);border-radius:11px;background:rgba(13,17,16,.62);color:#d8d6cc;transition:all .2s ease}
-    .social:hover{transform:translateY(-2px);color:var(--accent-bright);border-color:rgba(200,161,107,.52);background:rgba(200,161,107,.1)}
+    .social{display:grid;place-items:center;width:37px;height:37px;border:1px solid rgba(190,205,232,.19);border-radius:11px;background:rgba(13,17,16,.62);color:#dce5f4;transition:all .2s ease}
+    .social:hover{transform:translateY(-2px);color:var(--accent-bright);border-color:rgba(121,168,255,.52);background:rgba(121,168,255,.1)}
     .social svg{width:16px;height:16px;display:block;fill:currentColor}
     .hero-note{position:absolute;z-index:1;right:18px;bottom:18px;max-width:220px;padding:12px 14px;border:1px solid rgba(238,231,211,.2);border-radius:12px;background:rgba(13,17,16,.72);backdrop-filter:blur(12px)}
     .hero-note small{display:block;color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
     .hero-note strong{display:block;margin-top:4px;font-size:11px;line-height:1.5}
     .systems{grid-column:span 5;padding:25px;min-height:460px}
     .card-head{display:flex;align-items:center;gap:12px;margin-bottom:19px}
-    .head-icon{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border:1px solid rgba(200,161,107,.27);border-radius:12px;background:rgba(200,161,107,.09);color:var(--accent-bright)}
+    .head-icon{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border:1px solid rgba(121,168,255,.27);border-radius:12px;background:rgba(121,168,255,.09);color:var(--accent-bright)}
     .head-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
     .card-kicker{margin:0 0 3px;color:var(--subtle);font:500 9px var(--mono);letter-spacing:.14em;text-transform:uppercase}
     h2{margin:0;font-size:19px;line-height:1.25;letter-spacing:-.045em;font-weight:800}
     .project-list{display:grid;gap:9px}
-    .system-item{display:block;padding:13px 14px;border:1px solid rgba(222,215,195,.12);border-radius:13px;background:rgba(8,12,10,.3);transition:background .2s ease,border-color .2s ease}
-    .system-item:hover{border-color:rgba(200,161,107,.4);background:rgba(200,161,107,.045)}
+    .system-item{display:block;padding:13px 14px;border:1px solid rgba(190,205,232,.12);border-radius:13px;background:rgba(8,12,10,.3);transition:background .2s ease,border-color .2s ease}
+    .system-item:hover{border-color:rgba(121,168,255,.4);background:rgba(121,168,255,.045)}
     .project-title-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
     h3{margin:0;color:#f0eee8;font-size:12px;font-weight:800;line-height:1.5}
     .arrow{color:#99998e;font-size:13px;transition:transform .2s,color .2s}
     .system-item:hover .arrow{color:var(--accent-bright);transform:translate(2px,-2px)}
-    .project-desc{margin:4px 0 0;color:#b0b1a7;font-size:10px;line-height:1.7}
+    .project-desc{margin:4px 0 0;color:#aeb9cb;font-size:10px;line-height:1.7}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
-    .tag{display:inline-flex;align-items:center;padding:4px 7px;border:1px solid rgba(222,215,195,.15);border-radius:7px;background:rgba(222,215,195,.045);color:#d0cec2;font:500 9px var(--mono)}
+    .tag{display:inline-flex;align-items:center;padding:4px 7px;border:1px solid rgba(190,205,232,.15);border-radius:7px;background:rgba(190,205,232,.045);color:#c7d2e5;font:500 9px var(--mono)}
     .products{grid-column:span 7;padding:25px;min-height:320px}
     .product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .product-card{display:flex;flex-direction:column;min-height:210px;padding:18px;border:1px solid rgba(222,215,195,.15);border-radius:16px;background:linear-gradient(145deg,rgba(31,39,34,.76),rgba(17,23,21,.82));transition:border-color .2s,transform .2s}
-    .product-card:hover{border-color:rgba(200,161,107,.45);transform:translateY(-2px)}
+    .product-card{display:flex;flex-direction:column;min-height:210px;padding:18px;border:1px solid rgba(190,205,232,.15);border-radius:16px;background:linear-gradient(145deg,rgba(31,39,34,.76),rgba(17,23,21,.82));transition:border-color .2s,transform .2s}
+    .product-card:hover{border-color:rgba(121,168,255,.45);transform:translateY(-2px)}
     .product-meta{display:flex;align-items:center;gap:8px;color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.09em;text-transform:uppercase}
-    .product-icon{display:grid;place-items:center;width:28px;height:28px;border:1px solid rgba(200,161,107,.22);border-radius:9px;background:rgba(200,161,107,.08);font-size:11px}
+    .product-icon{display:grid;place-items:center;width:28px;height:28px;border:1px solid rgba(121,168,255,.22);border-radius:9px;background:rgba(121,168,255,.08);font-size:11px}
     .product-card h3{margin-top:12px;font-size:16px;letter-spacing:-.045em}
-    .product-desc{margin:8px 0 17px;color:#bbbcb1;font-size:11px;line-height:1.8}
+    .product-desc{margin:8px 0 17px;color:#bac5d7;font-size:11px;line-height:1.8}
     .product-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:auto}
-    .product-links a{display:inline-flex;align-items:center;gap:6px;color:#e0dcd0;font-size:10px;font-weight:800}
+    .product-links a{display:inline-flex;align-items:center;gap:6px;color:#dce5f4;font-size:10px;font-weight:800}
     .product-links a:first-child{color:var(--accent-bright)}
     .product-links a:hover{color:#fff}
     .product-links svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
     .bring{grid-column:span 5;padding:25px;min-height:320px}
     .bring-list{display:grid;gap:9px;margin:0;padding:0;list-style:none}
-    .bring-item{padding:13px 14px;border:1px solid rgba(222,215,195,.12);border-radius:13px;background:rgba(8,12,10,.3)}
+    .bring-item{padding:13px 14px;border:1px solid rgba(190,205,232,.12);border-radius:13px;background:rgba(8,12,10,.3)}
     .bring-item small{color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
     .language-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
     .language{padding:4px 7px;border:1px solid rgba(168,179,155,.24);border-radius:7px;background:#1b221e;color:#d7dfce;font:500 9px var(--mono)}
-    .certs{grid-column:span 12;padding:25px}
-    .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-    .cert{display:flex;gap:13px;padding:16px;border:1px solid rgba(222,215,195,.12);border-radius:14px;background:rgba(8,12,10,.3)}
-    .cert-logo{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:10px;background:#ebe6dc;color:#191714;font:800 15px var(--sans);letter-spacing:-.06em}
-    .cert-logo--udemy{background:#211a2c;color:#d4bcff;font-size:19px}
-    .cert-logo--mfa{background:#dde7f3;color:#16325c;font:500 10px var(--mono);letter-spacing:0}
-    .cert-body{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
-    .cert h3{font-size:12.5px;line-height:1.4}
-    .cert-issuer{margin:3px 0 0;color:#d0cec2;font-size:11px}
-    .cert-meta{margin:5px 0 0;color:#9a9e93;font-size:10px;line-height:1.65}
-    .cert-meta span{display:block;font:9px/1.6 var(--mono);overflow-wrap:anywhere}
-    .cert-button{display:inline-flex;align-items:center;gap:6px;margin-top:11px;padding:6px 12px;border:1px solid rgba(226,224,209,.32);border-radius:999px;color:#efeee8;font-size:10px;font-weight:800;transition:border-color .2s ease,color .2s ease}
-    .cert-button:hover{border-color:rgba(200,161,107,.6);color:var(--accent-bright)}
-    .cert-button svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-    .cert-skills{margin:11px 0 0;color:#b0b1a7;font-size:10px;line-height:1.6}
-    .cert-skills strong{color:#d8d6cc}
-    .story{grid-column:span 12;min-height:370px;display:grid;grid-template-columns:minmax(0,.92fr) minmax(520px,1.08fr);padding:0}
-    .story-copy{position:relative;z-index:1;padding:36px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(115deg,rgba(21,27,25,.96),rgba(21,27,25,.78))}
-    .story .eyebrow{color:var(--olive)}
-    .story h2{margin-top:13px;font-size:clamp(25px,3.1vw,39px);line-height:1.15;letter-spacing:-.06em;max-width:650px}
-    .story-text{max-width:610px;margin:13px 0 0;color:#c3c2b7;font-size:12px;line-height:1.95}
-    .story-tag{display:inline-flex;align-items:center;gap:8px;margin-top:19px;padding:7px 10px;border:1px solid rgba(222,215,195,.18);border-radius:9px;background:rgba(13,17,16,.62);color:#dfd7c4;font:500 9px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-    .story-places{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:repeat(2,minmax(0,1fr));gap:3px;min-width:0;background:#0f1412}
-    .place{position:relative;min-height:0;overflow:hidden;margin:0}
-    .place--prague{grid-row:1/-1}
-    .place img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.78) contrast(1.03) brightness(.88);transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .35s ease}
-    .place--prague img{object-position:center 40%}.place--warsaw img{object-position:center 22%}.place--munster img{object-position:center 48%}
-    .place::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(8,12,10,.82) 100%);pointer-events:none}
-    .place figcaption{position:absolute;z-index:1;left:15px;bottom:12px;color:#eee9dc;font:500 9px var(--mono);letter-spacing:.09em;text-transform:uppercase}
-    .place figcaption span{display:block;margin-top:2px;color:rgba(238,233,220,.62);font-size:8px;letter-spacing:.06em}
-    .place:hover img{transform:scale(1.025);filter:saturate(.92) contrast(1.03) brightness(.94)}
+    .certs{grid-column:span 12;padding:28px}
+    .section-intro{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}
+    .section-note{max-width:430px;margin:0;color:var(--muted);font-size:11px;line-height:1.75}
+    .certificate-showcase{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .certificate{display:flex;flex-direction:column;min-width:0;border:1px solid var(--line);border-radius:17px;background:rgba(5,10,20,.48);overflow:hidden}
+    .certificate-preview{aspect-ratio:1.345/1;background:#f5f3ef;overflow:hidden}
+    .certificate-preview img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+    .certificate:hover .certificate-preview img{transform:scale(1.012)}
+    .certificate-caption{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 17px}
+    .certificate-caption h3{font-size:13px}.certificate-caption p{margin:3px 0 0;color:var(--subtle);font-size:10px}
+    .cert-link{flex:0 0 auto;color:var(--accent-bright);font-size:10px;font-weight:800}
+    .credential-more{margin-top:14px;border-top:1px solid var(--line)}
+    .credential-more>summary{display:flex;align-items:center;justify-content:center;gap:9px;margin:14px auto 0;padding:10px 15px;width:max-content;cursor:pointer;list-style:none;border:1px solid rgba(121,168,255,.35);border-radius:999px;background:rgba(121,168,255,.07);color:#dbe7ff;font-size:10px;font-weight:800}
+    .credential-more>summary::-webkit-details-marker{display:none}.credential-more>summary::after{content:'↓';color:var(--accent)}.credential-more[open]>summary::after{content:'↑'}
+    .summary-open{display:none}.credential-more[open] .summary-closed{display:none}.credential-more[open] .summary-open{display:inline}
+    .credential-more[open]>summary{margin-bottom:14px}
+    .badge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .academy-badge{display:flex;flex-direction:column;min-height:245px;padding:19px;border:1px solid rgba(121,168,255,.2);border-radius:16px;background:#efe9df;color:#181817}
+    .academy-mark{font:500 11px var(--mono);letter-spacing:.06em}.academy-badge h3{margin-top:28px;color:#181817;font-size:22px;line-height:1.1;letter-spacing:-.055em}.academy-badge .presented{margin:28px 0 0;color:#6d685f;font:500 9px var(--mono);text-transform:uppercase;letter-spacing:.09em}.academy-badge strong{font-size:16px}.academy-badge footer{margin-top:auto;padding:20px 0 0;color:#6d685f;font:500 8px var(--mono);text-transform:uppercase;letter-spacing:.06em}.academy-badge:hover{border-color:rgba(121,168,255,.55)}
+    .story{grid-column:span 12;padding:28px}
+    .story-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}.story-head h2{margin-top:10px;font-size:clamp(25px,3vw,38px);line-height:1.15;letter-spacing:-.06em}.story-text{max-width:530px;margin:0;color:var(--muted);font-size:12px;line-height:1.85}
+    .people-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:14px}.people-card{position:relative;min-height:390px;margin:0;overflow:hidden;border-radius:17px;background:#0b1220}.people-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03);transition:transform .6s cubic-bezier(.2,.7,.2,1)}.people-card--ambassador img{object-position:center 35%}.people-card--group img{object-position:center 38%}.people-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(5,10,20,.93) 100%)}.people-card figcaption{position:absolute;z-index:1;left:20px;right:20px;bottom:18px}.people-card small{color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.people-card strong{display:block;margin-top:4px;font-size:14px;line-height:1.45}.people-card:hover img{transform:scale(1.025)}
     footer{display:flex;justify-content:space-between;gap:16px;padding:3px 2px 26px;color:#82877d;font-size:10px}
     footer a{color:#c0bbaa}footer a:hover{color:var(--accent-bright)}
     @media(max-width:1080px){.hero{grid-column:span 12;min-height:420px}.systems{grid-column:span 12;min-height:0}.project-list{grid-template-columns:repeat(3,minmax(0,1fr))}.products{grid-column:span 7}.bring{grid-column:span 5}.hero-copy{width:65%}}
-    @media(max-width:900px){.story{grid-template-columns:1fr}.story-copy{padding:30px}.story-places{min-height:360px}}
-    @media(max-width:760px){.shell{width:calc(100% - 28px)}.topbar{padding:18px 0}.nav{gap:13px}.nav>a:not(.nav-cta){display:none}.bento{gap:12px}.card{border-radius:19px}.hero{min-height:430px;padding:26px}.hero-copy{width:72%}.hero-photo{width:61%;object-position:center 40%}.hero-note{right:12px;bottom:12px;max-width:178px}.hero-note strong{font-size:10px}.systems,.products,.bring{padding:21px}.project-list{grid-template-columns:1fr}.products,.bring{grid-column:span 12}.story-copy{padding:26px}.story-places{min-height:330px}.certs{padding:21px}}
-    @media(max-width:700px){.photo-atmosphere__layer--cave{left:-18vw;top:0;width:78vw;height:60vh;opacity:.32;mask-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%)}.photo-atmosphere__layer--flags{right:-14vw;bottom:0;width:76vw;height:60vh;opacity:.27;mask-image:linear-gradient(270deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%);-webkit-mask-image:linear-gradient(270deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%)}}@media(max-width:480px){.shell{width:calc(100% - 20px)}.brand-label{font-size:11px}.nav-cta{padding:8px 10px;font-size:10px}.hero{min-height:565px;padding:21px;flex-direction:column}.hero-photo{width:100%;opacity:.72;object-position:center 37%}.hero::after{background:linear-gradient(90deg,rgba(20,27,24,.95),rgba(20,27,24,.72)),linear-gradient(0deg,rgba(13,17,16,.92),transparent 75%)}.hero-copy{width:100%;flex:1}h1{font-size:51px}.hero-lede{font-size:12px}.hero-note{position:relative;right:auto;bottom:auto;margin-top:18px;max-width:205px}.socials{padding-top:22px}.product-grid{grid-template-columns:1fr}.product-card{min-height:185px}.systems,.products,.bring,.certs{padding:18px}.card-head{margin-bottom:16px}h2{font-size:18px}.story-copy{padding:22px}.story h2{font-size:30px}.story-text{font-size:12px}.story-places{grid-template-columns:1.1fr .9fr;min-height:300px}.place figcaption{left:11px;bottom:9px;font-size:8px}footer{flex-direction:column;padding:3px 2px 22px}}
+    @media(max-width:900px){.certificate-showcase{grid-template-columns:1fr}.badge-grid{grid-template-columns:1fr}.people-grid{grid-template-columns:1fr}.people-card{min-height:430px}.section-intro,.story-head{align-items:flex-start;flex-direction:column}}
+    @media(max-width:760px){.shell{width:calc(100% - 28px)}.topbar{padding:18px 0}.nav{gap:13px}.nav>a:not(.nav-cta){display:none}.bento{gap:12px}.card{border-radius:19px}.hero{min-height:430px;padding:26px}.hero-copy{width:72%}.hero-photo{width:61%;object-position:center 40%}.hero-note{right:12px;bottom:12px;max-width:178px}.hero-note strong{font-size:10px}.systems,.products,.bring{padding:21px}.project-list{grid-template-columns:1fr}.products,.bring{grid-column:span 12}.certs,.story{padding:21px}.people-card{min-height:380px}}
+    @media(max-width:700px){.photo-atmosphere__layer--cave{left:-18vw;top:0;width:78vw;height:60vh;opacity:.25;mask-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%)}.photo-atmosphere__layer--flags{right:-14vw;bottom:0;width:76vw;height:60vh;opacity:.21;mask-image:linear-gradient(270deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%);-webkit-mask-image:linear-gradient(270deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%)}}@media(max-width:480px){.shell{width:calc(100% - 20px)}.brand-label{font-size:11px}.nav-cta{padding:8px 10px;font-size:10px}.hero{min-height:565px;padding:21px;flex-direction:column}.hero-photo{width:100%;opacity:.72;object-position:center 37%}.hero::after{background:linear-gradient(90deg,rgba(11,18,32,.96),rgba(11,18,32,.72)),linear-gradient(0deg,rgba(8,13,24,.92),transparent 75%)}.hero-copy{width:100%;flex:1}h1{font-size:51px}.hero-lede{font-size:12px}.hero-note{position:relative;right:auto;bottom:auto;margin-top:18px;max-width:205px}.socials{padding-top:22px}.product-grid{grid-template-columns:1fr}.product-card{min-height:185px}.systems,.products,.bring,.certs,.story{padding:18px}.card-head{margin-bottom:16px}h2{font-size:18px}.story-head h2{font-size:30px}.story-text{font-size:12px}.people-card{min-height:340px}.certificate-caption{align-items:flex-start;flex-direction:column;gap:8px}footer{flex-direction:column;padding:3px 2px 22px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}.card:hover,.product-card:hover,.button:hover,.social:hover{transform:none}}
   </style>
 </head>
@@ -193,23 +184,28 @@
         </ul>
       </section>
       <section class="card certs" id="certifications" aria-labelledby="certs-title">
-        <div class="card-head"><span class="head-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 13.9-1.5 8.1 5-3 5 3-1.5-8.1"/></svg></span><div><p class="card-kicker">Verified learning</p><h2 id="certs-title">Licenses &amp; certifications</h2></div></div>
-        <div class="cert-grid">
-          <article class="cert"><span class="cert-logo cert-logo--anthropic" aria-hidden="true">A\</span><div class="cert-body"><h3>Claude Academy: Claude Code 101</h3><p class="cert-issuer">Anthropic</p><p class="cert-meta">Issued Sep 2026<br>Credential ID<span>e5ca490b193f21de6a3e2172374b98db</span></p><a class="cert-button" href="https://academy.claude.com/verify/e5ca490b193f21de6a3e2172374b98db" target="_blank" rel="noopener noreferrer" aria-label="Show credential: Claude Academy: Claude Code 101">Show credential <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div></article>
-          <article class="cert"><span class="cert-logo cert-logo--anthropic" aria-hidden="true">A\</span><div class="cert-body"><h3>Claude Academy: AI Fluency: Framework and Foundations</h3><p class="cert-issuer">Anthropic</p><p class="cert-meta">Issued Sep 2026<br>Credential ID<span>95d68e659825bfc123ef19d6fe79a9c1</span></p><a class="cert-button" href="https://academy.claude.com/verify/95d68e659825bfc123ef19d6fe79a9c1" target="_blank" rel="noopener noreferrer" aria-label="Show credential: Claude Academy: AI Fluency: Framework and Foundations">Show credential <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div></article>
-          <article class="cert"><span class="cert-logo cert-logo--anthropic" aria-hidden="true">A\</span><div class="cert-body"><h3>Claude Academy: AI Capabilities and Limitations</h3><p class="cert-issuer">Anthropic</p><p class="cert-meta">Issued Aug 2026<br>Credential ID<span>bdcae766513918d71265bbe6927a0bec</span></p><a class="cert-button" href="https://academy.claude.com/verify/bdcae766513918d71265bbe6927a0bec" target="_blank" rel="noopener noreferrer" aria-label="Show credential: Claude Academy: AI Capabilities and Limitations">Show credential <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a></div></article>
-          <article class="cert"><span class="cert-logo cert-logo--udemy" aria-hidden="true">U</span><div class="cert-body"><h3>Programming in C# Certification</h3><p class="cert-issuer">Udemy</p><p class="cert-meta">Issued Mar 2026<br>Credential ID<span>UC-20b991ea-9daa-425b-b9d6-d46dffff2ef3</span></p><a class="cert-button" href="https://www.udemy.com/certificate/UC-20b991ea-9daa-425b-b9d6-d46dffff2ef3/" target="_blank" rel="noopener noreferrer" aria-label="Show credential: Programming in C# Certification">Show credential <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><p class="cert-skills"><strong>Skills:</strong> C99, Debugging</p></div></article>
-          <article class="cert"><span class="cert-logo cert-logo--udemy" aria-hidden="true">U</span><div class="cert-body"><h3>Learn Python Programming – Beginner to Master</h3><p class="cert-issuer">Udemy</p><p class="cert-meta">Issued Oct 2025<br>Credential ID<span>UC-b08dee3d-03ef-4725-8f76-b30c942ec7cf</span></p><a class="cert-button" href="https://www.udemy.com/certificate/UC-b08dee3d-03ef-4725-8f76-b30c942ec7cf/" target="_blank" rel="noopener noreferrer" aria-label="Show credential: Learn Python Programming – Beginner to Master">Show credential <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><p class="cert-skills"><strong>Skills:</strong> Python, SQLite</p></div></article>
-          <article class="cert"><span class="cert-logo cert-logo--udemy" aria-hidden="true">U</span><div class="cert-body"><h3>Java Bootcamp: Learn Java with 100+ Java Projects</h3><p class="cert-issuer">Udemy</p><p class="cert-meta">Issued Sep 2025<br>Credential ID<span>UC-36bf607e-9bf2-4848-9284-cd838a676bbc</span></p><a class="cert-button" href="https://www.udemy.com/certificate/UC-36bf607e-9bf2-4848-9284-cd838a676bbc/" target="_blank" rel="noopener noreferrer" aria-label="Show credential: Java Bootcamp: Learn Java with 100+ Java Projects">Show credential <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><p class="cert-skills"><strong>Skills:</strong> Object-Oriented Programming, Java</p></div></article>
-          <article class="cert"><span class="cert-logo cert-logo--mfa" aria-hidden="true">MFA</span><div class="cert-body"><h3>Certificate of Recognition – Israeli Ministry of Foreign Affairs &amp; IMUNA</h3><p class="cert-issuer">Ministry of Foreign Affairs of Israel</p><p class="cert-meta">Issued Aug 2023</p><p class="cert-skills"><strong>Skills:</strong> Diplomacy, Political Science</p></div></article>
+        <div class="section-intro"><div class="card-head"><span class="head-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 13.9-1.5 8.1 5-3 5 3-1.5-8.1"/></svg></span><div><p class="card-kicker">Verified learning</p><h2 id="certs-title">Credentials, shown in full</h2></div></div><p class="section-note">The certificate is the proof. Two recent credentials stay visible; the rest open only when you want to look deeper.</p></div>
+        <div class="certificate-showcase">
+          <article class="certificate"><a class="certificate-preview" href="https://www.udemy.com/certificate/UC-36bf607e-9bf2-4848-9284-cd838a676bbc/" target="_blank" rel="noopener noreferrer" aria-label="Open the verified Java certificate"><img src="assets/certificate-java.jpg" alt="Java Bootcamp certificate awarded to Shimon Esterkin by Udemy" loading="lazy" width="1600" height="1190"></a><div class="certificate-caption"><div><h3>Java Bootcamp</h3><p>Udemy · Issued September 2025</p></div><a class="cert-link" href="https://www.udemy.com/certificate/UC-36bf607e-9bf2-4848-9284-cd838a676bbc/" target="_blank" rel="noopener noreferrer">Verify ↗</a></div></article>
+          <article class="certificate"><a class="certificate-preview" href="https://www.udemy.com/certificate/UC-b08dee3d-03ef-4725-8f76-b30c942ec7cf/" target="_blank" rel="noopener noreferrer" aria-label="Open the verified Python certificate"><img src="assets/certificate-python.jpg" alt="Python programming certificate awarded to Shimon Esterkin by Udemy" loading="lazy" width="1600" height="1190"></a><div class="certificate-caption"><div><h3>Python Programming</h3><p>Udemy · Issued October 2025</p></div><a class="cert-link" href="https://www.udemy.com/certificate/UC-b08dee3d-03ef-4725-8f76-b30c942ec7cf/" target="_blank" rel="noopener noreferrer">Verify ↗</a></div></article>
         </div>
+        <details class="credential-more">
+          <summary><span class="summary-closed">Show four more credentials</span><span class="summary-open">Show fewer credentials</span></summary>
+          <div class="certificate-showcase">
+            <article class="certificate"><a class="certificate-preview" href="https://www.udemy.com/certificate/UC-20b991ea-9daa-425b-b9d6-d46dffff2ef3/" target="_blank" rel="noopener noreferrer" aria-label="Open the verified C sharp certificate"><img src="assets/certificate-csharp.jpg" alt="C sharp programming certificate awarded to Shimon Esterkin by Udemy" loading="lazy" width="1600" height="1190"></a><div class="certificate-caption"><div><h3>Programming in C#</h3><p>Udemy · Issued March 2026</p></div><a class="cert-link" href="https://www.udemy.com/certificate/UC-20b991ea-9daa-425b-b9d6-d46dffff2ef3/" target="_blank" rel="noopener noreferrer">Verify ↗</a></div></article>
+          </div>
+          <div class="badge-grid" style="margin-top:12px">
+            <a class="academy-badge" href="https://academy.claude.com/verify/e5ca490b193f21de6a3e2172374b98db" target="_blank" rel="noopener noreferrer"><span class="academy-mark">Claude Academy</span><h3>Claude<br>Code 101</h3><span class="presented">Presented to</span><strong>Shimon</strong><footer>Issued September 16, 2026 · Verified ↗</footer></a>
+            <a class="academy-badge" href="https://academy.claude.com/verify/95d68e659825bfc123ef19d6fe79a9c1" target="_blank" rel="noopener noreferrer"><span class="academy-mark">Claude Academy</span><h3>AI Fluency:<br>Foundations</h3><span class="presented">Presented to</span><strong>Shimon</strong><footer>Issued September 2026 · Verified ↗</footer></a>
+            <a class="academy-badge" href="https://academy.claude.com/verify/bdcae766513918d71265bbe6927a0bec" target="_blank" rel="noopener noreferrer"><span class="academy-mark">Claude Academy</span><h3>AI Capabilities<br>&amp; Limitations</h3><span class="presented">Presented to</span><strong>Shimon</strong><footer>Issued August 2026 · Verified ↗</footer></a>
+          </div>
+        </details>
       </section>
       <section class="card story" id="story" aria-labelledby="story-title">
-        <div class="story-copy"><p class="eyebrow">Outside the terminal</p><h2 id="story-title">The systems matter.<br>So do the stories around them.</h2><p class="story-text">Curious about sociology and historical consciousness, happiest around live music, and always ready to take the long way through a new city. The places and experiences behind the code are part of the story, too.</p><span class="story-tag">Personal archive · places that shaped the view</span></div>
-        <div class="story-places" aria-label="Selected places from Shimi's personal archive">
-          <figure class="place place--prague"><img src="assets/prague-background.webp" alt="Shimi visiting Prague Castle in Czechia" loading="lazy" width="563" height="1000"><figcaption>Prague<span>Czechia</span></figcaption></figure>
-          <figure class="place place--warsaw"><img src="assets/warsaw-palace.jpeg" alt="The Palace of Culture and Science and its fountains in Warsaw" loading="lazy" width="563" height="1000"><figcaption>Warsaw<span>Poland</span></figcaption></figure>
-          <figure class="place place--munster"><img src="assets/munster-streets.jpeg" alt="A city street leading toward St. Lambert's Church in Münster" loading="lazy" width="563" height="1000"><figcaption>Münster<span>Germany</span></figcaption></figure>
+        <div class="story-head"><div><p class="eyebrow">Beyond the terminal</p><h2 id="story-title">Technical depth.<br>Human context.</h2></div><p class="story-text">Diplomacy, Model UN, languages, travel, and the conversations around them shape how I work: listen carefully, understand the system, then make something useful.</p></div>
+        <div class="people-grid">
+          <figure class="people-card people-card--ambassador"><img src="assets/shimi-kosovo-ambassador.jpeg" alt="Shimi Esterkin with Kosovo ambassador Ines Demiri" loading="lazy"><figcaption><small>Diplomacy &amp; dialogue</small><strong>With Kosovo’s ambassador, Ines Demiri</strong></figcaption></figure>
+          <figure class="people-card people-card--group"><img src="assets/shimi-model-un-group.jpeg" alt="Shimi Esterkin with a Model United Nations committee" loading="lazy"><figcaption><small>Model United Nations</small><strong>Working with people, positions, and ideas in the same room</strong></figcaption></figure>
         </div>
       </section>
     </main>
