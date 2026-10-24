@@ -15,13 +15,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--bg:#080d18;--panel:#111827;--panel-soft:#151e30;--line:rgba(190,205,232,.14);--line-strong:rgba(190,205,232,.28);--text:#f7f8fb;--muted:#b5bfd1;--subtle:#7f8da6;--accent:#79a8ff;--accent-bright:#a7c5ff;--olive:#9eb7e3;--mono:'DM Mono',monospace;--sans:Manrope,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+    :root{color-scheme:dark;--bg:#080d18;--panel:#111827;--panel-soft:#151e30;--line:rgba(190,205,232,.14);--line-strong:rgba(190,205,232,.28);--text:#f7f8fb;--muted:#b5bfd1;--subtle:#7f8da6;--accent:#a78bfa;--accent-bright:#c4b5fd;--blue:#79a8ff;--olive:#9eb7e3;--mono:'DM Mono',monospace;--sans:Manrope,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:24px}
     body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 var(--sans)}
     a{color:inherit;text-decoration:none}
     a:focus-visible{outline:2px solid var(--accent-bright);outline-offset:4px}
-    .ambient{position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 8% 0%,rgba(70,111,190,.17),transparent 34%),radial-gradient(ellipse at 100% 18%,rgba(38,76,148,.18),transparent 34%),var(--bg)}
+    .ambient{position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 8% 0%,rgba(104,78,190,.20),transparent 34%),radial-gradient(ellipse at 100% 18%,rgba(38,76,148,.18),transparent 34%),var(--bg)}
     .texture{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;background-image:linear-gradient(rgba(190,205,232,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(190,205,232,.05) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,#000,transparent 88%)}
     .photo-atmosphere{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
     .photo-atmosphere__layer{position:absolute;display:block;background-size:cover;background-repeat:no-repeat;filter:saturate(.54) contrast(1.08) brightness(.67)}
@@ -31,7 +31,7 @@
     .shell{position:relative;z-index:2;width:min(1440px,calc(100% - 48px));margin:0 auto}
     .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0 21px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}
-    .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(121,168,255,.55);border-radius:13px;background:linear-gradient(145deg,#b7d0ff,#6c9ef9);color:#071021;font:500 12px var(--mono);letter-spacing:-.08em}
+    .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(167,139,250,.55);border-radius:13px;background:linear-gradient(145deg,#d6ccff,#8c6dea);color:#100a25;font:500 12px var(--mono);letter-spacing:-.08em}
     .brand-label{font-size:13px;letter-spacing:.055em}.brand-label span{color:var(--subtle);font-weight:500}
     .nav{display:flex;align-items:center;gap:25px;color:#bec8db;font-size:11px;font-weight:800}
     .nav a:hover{color:var(--accent-bright)}
@@ -48,14 +48,14 @@
     .availability{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid rgba(121,168,255,.31);border-radius:999px;background:rgba(13,17,16,.48);color:#cfe0ff;font:500 9px var(--mono);letter-spacing:.06em}
     .status-dot{width:6px;height:6px;border-radius:50%;background:var(--accent-bright)}
     h1{margin:21px 0 0;font-size:clamp(43px,5vw,72px);font-weight:800;line-height:.99;letter-spacing:-.075em}
-    .surname{color:var(--accent-bright)}
+    .surname{color:var(--accent-bright);background:linear-gradient(90deg,var(--blue),var(--accent-bright));background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .hero-role{margin:17px 0 0;font-size:clamp(14px,1.5vw,19px);font-weight:800;line-height:1.55;color:#efeee8;letter-spacing:-.025em}
     .hero-role span{color:var(--accent-bright)}
     .hero-lede{max-width:480px;margin:13px 0 0;color:#c6d0e0;font-size:12px;line-height:1.9}
     .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
     .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 14px;border-radius:11px;font-size:10px;font-weight:800;transition:transform .2s ease,background .2s ease,border-color .2s ease}
     .button:hover{transform:translateY(-2px)}
-    .button-primary{background:var(--accent-bright);color:#1b1914;box-shadow:0 8px 24px rgba(121,168,255,.12)}
+    .button-primary{background:linear-gradient(135deg,var(--blue),var(--accent-bright));color:#121023;box-shadow:0 8px 24px rgba(167,139,250,.18)}
     .button-primary:hover{background:#c6d9ff}
     .button-secondary{border:1px solid rgba(190,205,232,.22);background:rgba(15,20,18,.56);color:#efeee8}
     .button-secondary:hover{border-color:rgba(190,205,232,.42)}
@@ -84,10 +84,11 @@
     .tag{display:inline-flex;align-items:center;padding:4px 7px;border:1px solid rgba(190,205,232,.15);border-radius:7px;background:rgba(190,205,232,.045);color:#c7d2e5;font:500 9px var(--mono)}
     .products{grid-column:span 7;padding:25px;min-height:320px}
     .product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .product-card{display:flex;flex-direction:column;min-height:210px;padding:18px;border:1px solid rgba(190,205,232,.15);border-radius:16px;background:linear-gradient(145deg,rgba(31,39,34,.76),rgba(17,23,21,.82));transition:border-color .2s,transform .2s}
-    .product-card:hover{border-color:rgba(121,168,255,.45);transform:translateY(-2px)}
+    .product-card{display:flex;flex-direction:column;min-height:210px;padding:18px;border:1px solid rgba(167,139,250,.19);border-radius:16px;background:linear-gradient(145deg,rgba(35,27,61,.68),rgba(12,20,35,.86));transition:border-color .2s,transform .2s}
+    .product-card:hover{border-color:rgba(167,139,250,.52);transform:translateY(-2px)}
     .product-meta{display:flex;align-items:center;gap:8px;color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.09em;text-transform:uppercase}
-    .product-icon{display:grid;place-items:center;width:28px;height:28px;border:1px solid rgba(121,168,255,.22);border-radius:9px;background:rgba(121,168,255,.08);font-size:11px}
+    .product-icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(167,139,250,.30);border-radius:9px;background:rgba(167,139,250,.10);overflow:hidden}
+    .product-icon img{display:block;width:24px;height:24px;border-radius:6px}
     .product-card h3{margin-top:12px;font-size:16px;letter-spacing:-.045em}
     .product-desc{margin:8px 0 17px;color:#bac5d7;font-size:11px;line-height:1.8}
     .product-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:auto}
@@ -122,7 +123,8 @@
     .academy-mark{font:500 11px var(--mono);letter-spacing:.06em}.academy-badge h3{margin-top:28px;color:#181817;font-size:22px;line-height:1.1;letter-spacing:-.055em}.academy-badge .presented{margin:28px 0 0;color:#6d685f;font:500 9px var(--mono);text-transform:uppercase;letter-spacing:.09em}.academy-badge strong{font-size:16px}.academy-badge footer{margin-top:auto;padding:20px 0 0;color:#6d685f;font:500 8px var(--mono);text-transform:uppercase;letter-spacing:.06em}.academy-badge:hover{border-color:rgba(121,168,255,.55)}
     .story{grid-column:span 12;padding:28px}
     .story-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}.story-head h2{margin-top:10px;font-size:clamp(25px,3vw,38px);line-height:1.15;letter-spacing:-.06em}.story-text{max-width:530px;margin:0;color:var(--muted);font-size:12px;line-height:1.85}
-    .people-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:14px}.people-card{position:relative;min-height:390px;margin:0;overflow:hidden;border-radius:17px;background:#0b1220}.people-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03);transition:transform .6s cubic-bezier(.2,.7,.2,1)}.people-card--ambassador img{object-position:center 35%}.people-card--group img{object-position:center 38%}.people-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(5,10,20,.93) 100%)}.people-card figcaption{position:absolute;z-index:1;left:20px;right:20px;bottom:18px}.people-card small{color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.people-card strong{display:block;margin-top:4px;font-size:14px;line-height:1.45}.people-card:hover img{transform:scale(1.025)}
+    .people-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:14px}.people-card{position:relative;min-height:390px;margin:0;overflow:hidden;border-radius:17px;background:#0b1220}.people-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03);transition:transform .6s cubic-bezier(.2,.7,.2,1)}.people-card--ambassador img{object-position:center 35%}.people-card--group img{object-position:center 38%}.people-card--jerusalem img{object-position:center 20%}.people-card--congress img{object-position:center 42%}.people-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(5,10,20,.93) 100%)}.people-card figcaption{position:absolute;z-index:1;left:20px;right:20px;bottom:18px}.people-card small{color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.people-card strong{display:block;margin-top:4px;font-size:14px;line-height:1.45}.people-card:hover img{transform:scale(1.025)}
+    .story-more{border-top-color:rgba(167,139,250,.22)}
     footer{display:flex;justify-content:space-between;gap:16px;padding:3px 2px 26px;color:#82877d;font-size:10px}
     footer a{color:#c0bbaa}footer a:hover{color:var(--accent-bright)}
     @media(max-width:1080px){.hero{grid-column:span 12;min-height:420px}.systems{grid-column:span 12;min-height:0}.project-list{grid-template-columns:repeat(3,minmax(0,1fr))}.products{grid-column:span 7}.bring{grid-column:span 5}.hero-copy{width:65%}}
@@ -171,8 +173,8 @@
       <section class="card products" aria-labelledby="products-title">
         <div class="card-head"><span class="head-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span><div><p class="card-kicker">Ideas made tangible</p><h2 id="products-title">Full-Stack &amp; Products</h2></div></div>
         <div class="product-grid">
-          <article class="product-card"><div class="product-meta"><span class="product-icon" aria-hidden="true">Aa</span>EdTech · PWA</div><h3>Sprachschule-app</h3><p class="product-desc">An offline-first German-learning app with vocabulary practice, spaced repetition, guided drills, and an AI tutor.</p><div class="product-links"><a href="https://www.sprachschule-app.com/" target="_blank" rel="noopener noreferrer">Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><a href="https://github.com/blackhebrewisraeli/Sprachschule-app" target="_blank" rel="noopener noreferrer">Source repo ↗</a></div></article>
-          <article class="product-card"><div class="product-meta"><span class="product-icon" aria-hidden="true">↗</span>Quant · FinTech</div><h3>ZeroChart</h3><p class="product-desc">A quantitative research and paper-trading environment for signals, backtesting, and portfolio simulation.</p><div class="product-links"><a href="https://zero-chart.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><a href="https://github.com/blackhebrewisraeli/ZeroChart" target="_blank" rel="noopener noreferrer">Source repo ↗</a></div></article>
+          <article class="product-card"><div class="product-meta"><span class="product-icon" aria-hidden="true"><img src="assets/sprachschule-logo.svg" alt="" width="32" height="32"></span>EdTech · PWA</div><h3>Sprachschule-app</h3><p class="product-desc">An offline-first German-learning app with vocabulary practice, spaced repetition, guided drills, and an AI tutor.</p><div class="product-links"><a href="https://www.sprachschule-app.com/" target="_blank" rel="noopener noreferrer">Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><a href="https://github.com/blackhebrewisraeli/Sprachschule-app" target="_blank" rel="noopener noreferrer">Source repo ↗</a></div></article>
+          <article class="product-card"><div class="product-meta"><span class="product-icon" aria-hidden="true"><img src="assets/zerochart-logo.svg" alt="" width="32" height="32"></span>Quant · FinTech</div><h3>ZeroChart</h3><p class="product-desc">A quantitative research and paper-trading environment for signals, backtesting, and portfolio simulation.</p><div class="product-links"><a href="https://zero-chart.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7M21 3l-10 10"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><a href="https://github.com/blackhebrewisraeli/ZeroChart" target="_blank" rel="noopener noreferrer">Source repo ↗</a></div></article>
         </div>
       </section>
       <section class="card bring" aria-labelledby="bring-title">
@@ -207,6 +209,13 @@
           <figure class="people-card people-card--ambassador"><img src="assets/shimi-kosovo-ambassador.jpeg" alt="Shimi Esterkin with Kosovo ambassador Ines Demiri" loading="lazy"><figcaption><small>Diplomacy &amp; dialogue</small><strong>With Kosovo’s ambassador, Ines Demiri</strong></figcaption></figure>
           <figure class="people-card people-card--group"><img src="assets/shimi-model-un-group.jpeg" alt="Shimi Esterkin with a Model United Nations committee" loading="lazy"><figcaption><small>Model United Nations</small><strong>Working with people, positions, and ideas in the same room</strong></figcaption></figure>
         </div>
+        <details class="credential-more story-more">
+          <summary><span class="summary-closed">Show two more moments</span><span class="summary-open">Show fewer moments</span></summary>
+          <div class="people-grid">
+            <figure class="people-card people-card--jerusalem"><img src="assets/shimi-jerusalem.jpeg" alt="Shimi Esterkin walking on Jaffa Street in Jerusalem" loading="lazy" width="562" height="1000"><figcaption><small>Jerusalem</small><strong>A quieter frame outside the formal settings</strong></figcaption></figure>
+            <figure class="people-card people-card--congress"><img src="assets/shimi-zionist-congress.jpeg" alt="Shimi Esterkin with participants at the Zionist Congress" loading="lazy" width="1000" height="750"><figcaption><small>People &amp; community</small><strong>At the Zionist Congress with fellow participants</strong></figcaption></figure>
+          </div>
+        </details>
       </section>
     </main>
     <footer><span>Built around curiosity — from systems to people.</span><a href="https://github.com/blackhebrewisraeli/blackhebrewisraeli.github.io" target="_blank" rel="noopener noreferrer">Built in public ↗</a></footer>
