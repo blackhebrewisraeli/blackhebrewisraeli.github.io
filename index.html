@@ -15,13 +15,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--bg:#080d18;--panel:#111827;--panel-soft:#151e30;--line:rgba(190,205,232,.14);--line-strong:rgba(190,205,232,.28);--text:#f7f8fb;--muted:#b5bfd1;--subtle:#7f8da6;--accent:#a78bfa;--accent-bright:#c4b5fd;--blue:#79a8ff;--olive:#9eb7e3;--mono:'DM Mono',monospace;--sans:Manrope,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+    :root{color-scheme:dark;--bg:#080d18;--panel:#111827;--panel-soft:#151e30;--line:rgba(190,205,232,.14);--line-strong:rgba(190,205,232,.28);--text:#f7f8fb;--muted:#b5bfd1;--subtle:#7f8da6;--accent:#c98262;--accent-bright:#e4ae94;--blue:#79a8ff;--olive:#9eb7e3;--mono:'DM Mono',monospace;--sans:Manrope,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:24px}
     body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 var(--sans)}
     a{color:inherit;text-decoration:none}
     a:focus-visible{outline:2px solid var(--accent-bright);outline-offset:4px}
-    .ambient{position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 8% 0%,rgba(104,78,190,.20),transparent 34%),radial-gradient(ellipse at 100% 18%,rgba(38,76,148,.18),transparent 34%),var(--bg)}
+    .ambient{position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse at 8% 0%,rgba(151,78,53,.16),transparent 34%),radial-gradient(ellipse at 100% 18%,rgba(38,76,148,.18),transparent 34%),var(--bg)}
     .texture{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;background-image:linear-gradient(rgba(190,205,232,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(190,205,232,.05) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,#000,transparent 88%)}
     .photo-atmosphere{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
     .photo-atmosphere__layer{position:absolute;display:block;background-size:cover;background-repeat:no-repeat;filter:saturate(.54) contrast(1.08) brightness(.67)}
@@ -31,7 +31,7 @@
     .shell{position:relative;z-index:2;width:min(1440px,calc(100% - 48px));margin:0 auto}
     .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0 21px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}
-    .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(167,139,250,.55);border-radius:13px;background:linear-gradient(145deg,#d6ccff,#8c6dea);color:#100a25;font:500 12px var(--mono);letter-spacing:-.08em}
+    .brand-mark{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(201,130,98,.58);border-radius:13px;background:linear-gradient(145deg,#f0c3ad,#c98262);color:#1c1110;font:500 12px var(--mono);letter-spacing:-.08em}
     .brand-label{font-size:13px;letter-spacing:.055em}.brand-label span{color:var(--subtle);font-weight:500}
     .nav{display:flex;align-items:center;gap:25px;color:#bec8db;font-size:11px;font-weight:800}
     .nav a:hover{color:var(--accent-bright)}
@@ -55,7 +55,7 @@
     .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
     .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 14px;border-radius:11px;font-size:10px;font-weight:800;transition:transform .2s ease,background .2s ease,border-color .2s ease}
     .button:hover{transform:translateY(-2px)}
-    .button-primary{background:linear-gradient(135deg,var(--blue),var(--accent-bright));color:#121023;box-shadow:0 8px 24px rgba(167,139,250,.18)}
+    .button-primary{background:linear-gradient(135deg,var(--accent-bright),var(--accent));color:#1c1110;box-shadow:0 8px 24px rgba(201,130,98,.20)}
     .button-primary:hover{background:#c6d9ff}
     .button-secondary{border:1px solid rgba(190,205,232,.22);background:rgba(15,20,18,.56);color:#efeee8}
     .button-secondary:hover{border-color:rgba(190,205,232,.42)}
@@ -84,10 +84,10 @@
     .tag{display:inline-flex;align-items:center;padding:4px 7px;border:1px solid rgba(190,205,232,.15);border-radius:7px;background:rgba(190,205,232,.045);color:#c7d2e5;font:500 9px var(--mono)}
     .products{grid-column:span 7;padding:25px;min-height:320px}
     .product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .product-card{display:flex;flex-direction:column;min-height:210px;padding:18px;border:1px solid rgba(167,139,250,.19);border-radius:16px;background:linear-gradient(145deg,rgba(35,27,61,.68),rgba(12,20,35,.86));transition:border-color .2s,transform .2s}
-    .product-card:hover{border-color:rgba(167,139,250,.52);transform:translateY(-2px)}
+    .product-card{display:flex;flex-direction:column;min-height:210px;padding:18px;border:1px solid rgba(201,130,98,.21);border-radius:16px;background:linear-gradient(145deg,rgba(49,30,30,.58),rgba(12,20,35,.86));transition:border-color .2s,transform .2s}
+    .product-card:hover{border-color:rgba(201,130,98,.54);transform:translateY(-2px)}
     .product-meta{display:flex;align-items:center;gap:8px;color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.09em;text-transform:uppercase}
-    .product-icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(167,139,250,.30);border-radius:9px;background:rgba(167,139,250,.10);overflow:hidden}
+    .product-icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(201,130,98,.32);border-radius:9px;background:rgba(201,130,98,.10);overflow:hidden}
     .product-icon img{display:block;width:24px;height:24px;border-radius:6px}
     .product-card h3{margin-top:12px;font-size:16px;letter-spacing:-.045em}
     .product-desc{margin:8px 0 17px;color:#bac5d7;font-size:11px;line-height:1.8}
@@ -124,7 +124,7 @@
     .story{grid-column:span 12;padding:28px}
     .story-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}.story-head h2{margin-top:10px;font-size:clamp(25px,3vw,38px);line-height:1.15;letter-spacing:-.06em}.story-text{max-width:530px;margin:0;color:var(--muted);font-size:12px;line-height:1.85}
     .people-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:14px}.people-card{position:relative;min-height:390px;margin:0;overflow:hidden;border-radius:17px;background:#0b1220}.people-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03);transition:transform .6s cubic-bezier(.2,.7,.2,1)}.people-card--ambassador img{object-position:center 35%}.people-card--group img{object-position:center 38%}.people-card--kotel img{object-position:center 61%}.people-card--congress img{object-position:center 42%}.people-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(5,10,20,.93) 100%)}.people-card figcaption{position:absolute;z-index:1;left:20px;right:20px;bottom:18px}.people-card small{color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.people-card strong{display:block;margin-top:4px;font-size:14px;line-height:1.45}.people-card:hover img{transform:scale(1.025)}
-    .story-more{border-top-color:rgba(167,139,250,.22)}
+    .story-more{border-top-color:rgba(201,130,98,.24)}
     footer{display:flex;justify-content:space-between;gap:16px;padding:3px 2px 26px;color:#82877d;font-size:10px}
     footer a{color:#c0bbaa}footer a:hover{color:var(--accent-bright)}
     @media(max-width:1080px){.hero{grid-column:span 12;min-height:420px}.systems{grid-column:span 12;min-height:0}.project-list{grid-template-columns:repeat(3,minmax(0,1fr))}.products{grid-column:span 7}.bring{grid-column:span 5}.hero-copy{width:65%}}
