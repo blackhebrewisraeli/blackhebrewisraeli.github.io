@@ -8,9 +8,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Shimi Esterkin — Systems & Full-Stack Developer">
   <meta property="og:description" content="Systems curiosity, a product mindset, and a personal story beyond the screen.">
-  <meta property="og:image" content="assets/tbilisi-background.webp">
+  <meta property="og:url" content="https://blackhebrewisraeli.github.io/">
+  <meta property="og:image" content="https://blackhebrewisraeli.github.io/assets/tbilisi-background.webp">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shimi Esterkin — Systems & Full-Stack Developer">
+  <meta name="twitter:description" content="Systems curiosity, a product mindset, and a personal story beyond the screen.">
+  <meta name="twitter:image" content="https://blackhebrewisraeli.github.io/assets/tbilisi-background.webp">
   <title>Shimi Esterkin — Systems & Full-Stack Developer</title>
+  <link rel="canonical" href="https://blackhebrewisraeli.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -125,10 +130,22 @@
     .story-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}.story-head h2{margin-top:10px;font-size:clamp(25px,3vw,38px);line-height:1.15;letter-spacing:-.06em}.story-text{max-width:530px;margin:0;color:var(--muted);font-size:12px;line-height:1.85}
     .people-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:14px}.people-card{position:relative;min-height:390px;margin:0;overflow:hidden;border-radius:17px;background:#0b1220}.people-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03);transition:transform .6s cubic-bezier(.2,.7,.2,1)}.people-card--ambassador img{object-position:center 35%}.people-card--group img{object-position:center 38%}.people-card--kotel img{object-position:center 61%}.people-card--congress img{object-position:center 42%}.people-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(5,10,20,.93) 100%)}.people-card figcaption{position:absolute;z-index:1;left:20px;right:20px;bottom:18px}.people-card small{color:var(--accent-bright);font:500 9px var(--mono);letter-spacing:.12em;text-transform:uppercase}.people-card strong{display:block;margin-top:4px;font-size:14px;line-height:1.45}.people-card:hover img{transform:scale(1.025)}
     .story-more{border-top-color:rgba(201,130,98,.24)}
+    .share-panel{grid-column:span 12;display:grid;grid-template-columns:minmax(0,.72fr) minmax(420px,1.28fr);gap:28px;align-items:center;padding:28px}
+    .share-copy h2{margin-top:10px;font-size:clamp(25px,3vw,38px);line-height:1.15;letter-spacing:-.06em}
+    .share-copy p{max-width:48ch;margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.75}
+    .share-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .share-button{display:flex;align-items:center;gap:12px;min-height:66px;padding:13px 15px;border:1px solid rgba(190,205,232,.15);border-radius:14px;background:rgba(8,12,20,.42);color:#eef2f8;font:inherit;text-align:left;cursor:pointer;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+    .share-button:hover{transform:translateY(-2px);border-color:rgba(121,168,255,.45);background:rgba(121,168,255,.065)}
+    .share-button:focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px}
+    .share-icon{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border:1px solid rgba(121,168,255,.26);border-radius:11px;background:rgba(121,168,255,.08);color:var(--accent-bright)}
+    .share-icon svg{display:block;width:17px;height:17px;fill:currentColor}
+    .share-label{display:block;font-size:11px;font-weight:800;line-height:1.35}
+    .share-hint{display:block;margin-top:3px;color:var(--subtle);font:500 8px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+    .share-status{grid-column:1/-1;min-height:18px;margin:0;color:var(--accent-bright);font:500 9px/1.5 var(--mono)}
     footer{display:flex;justify-content:space-between;gap:16px;padding:3px 2px 26px;color:#82877d;font-size:10px}
     footer a{color:#c0bbaa}footer a:hover{color:var(--accent-bright)}
     @media(max-width:1080px){.hero{grid-column:span 12;min-height:420px}.systems{grid-column:span 12;min-height:0}.project-list{grid-template-columns:repeat(3,minmax(0,1fr))}.products{grid-column:span 7}.bring{grid-column:span 5}.hero-copy{width:65%}}
-    @media(max-width:900px){.certificate-showcase{grid-template-columns:1fr}.badge-grid{grid-template-columns:1fr}.people-grid{grid-template-columns:1fr}.people-card{min-height:430px}.section-intro,.story-head{align-items:flex-start;flex-direction:column}}
+    @media(max-width:900px){.certificate-showcase{grid-template-columns:1fr}.badge-grid{grid-template-columns:1fr}.people-grid{grid-template-columns:1fr}.people-card{min-height:430px}.section-intro,.story-head{align-items:flex-start;flex-direction:column}.share-panel{grid-template-columns:1fr}.share-copy p{max-width:62ch}}
     @media(max-width:760px){.shell{width:calc(100% - 28px)}.topbar{padding:18px 0}.nav{gap:13px}.nav>a:not(.nav-cta){display:none}.bento{gap:12px}.card{border-radius:19px}.hero{min-height:430px;padding:26px}.hero-copy{width:72%}.hero-photo{width:61%;object-position:center 40%}.hero-note{right:12px;bottom:12px;max-width:178px}.hero-note strong{font-size:10px}.systems,.products,.bring{padding:21px}.project-list{grid-template-columns:1fr}.products,.bring{grid-column:span 12}.certs,.story{padding:21px}.people-card{min-height:380px}}
     @media(max-width:700px){.photo-atmosphere__layer--cave{left:-18vw;top:0;width:78vw;height:60vh;opacity:.25;mask-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%)}.photo-atmosphere__layer--flags{right:-14vw;bottom:0;width:76vw;height:60vh;opacity:.21;mask-image:linear-gradient(270deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%);-webkit-mask-image:linear-gradient(270deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.80) 73%,transparent 100%)}}
     @media(max-width:600px){
@@ -149,6 +166,9 @@
       .socials{margin-top:18px;padding-top:0}
       .hero-note{position:relative;right:auto;bottom:auto;max-width:none;margin-top:18px;padding:12px 13px;border-left:2px solid var(--accent);background:rgba(8,13,24,.54)}
       .systems,.products,.bring,.certs,.story{padding:18px}
+      .share-panel{gap:20px;padding:18px}
+      .share-actions{grid-template-columns:1fr}
+      .share-button{min-height:62px}
       .card-head{margin-bottom:16px}h2{font-size:18px}
       .project-list,.product-grid,.certificate-showcase,.people-grid{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(260px,86%);gap:10px;margin-right:-18px;padding-right:18px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:inline mandatory;scrollbar-width:none}
       .project-list::-webkit-scrollbar,.product-grid::-webkit-scrollbar,.certificate-showcase::-webkit-scrollbar,.people-grid::-webkit-scrollbar{display:none}
@@ -249,8 +269,43 @@
           </div>
         </details>
       </section>
+      <section class="card share-panel" id="share" aria-labelledby="share-title">
+        <div class="share-copy">
+          <p class="eyebrow">Pass it on</p>
+          <h2 id="share-title">Share this portfolio.</h2>
+          <p>Know a team, collaborator, or opportunity that could be a fit? Send this page their way. Story buttons open your phone’s share sheet.</p>
+        </div>
+        <div class="share-actions" aria-label="Share this portfolio">
+          <a class="share-button" href="https://twitter.com/intent/tweet?text=Meet%20Shimi%20Esterkin%20%E2%80%94%20a%20systems-minded%20engineer%20and%20product-focused%20builder.&amp;url=https%3A%2F%2Fblackhebrewisraeli.github.io%2F" target="_blank" rel="noopener noreferrer">
+            <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.9 1.5h3.7l-8.1 9.3L24 22.5h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L0 1.5h7.6l5.2 6.9 6.1-6.9Zm-1.3 19h2L6.5 3.4H4.3l13.3 17.1Z"/></svg></span>
+            <span><span class="share-label">Post on X</span><span class="share-hint">Ready-to-post caption</span></span>
+          </a>
+          <a class="share-button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblackhebrewisraeli.github.io%2F" target="_blank" rel="noopener noreferrer">
+            <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.7 22v-9h3l.45-3.5H13.7V7.26c0-1.01.28-1.7 1.74-1.7h1.86V2.43a25 25 0 0 0-2.71-.14c-2.68 0-4.52 1.64-4.52 4.64V9.5H7v3.5h3.07v9h3.63Z"/></svg></span>
+            <span><span class="share-label">Facebook post</span><span class="share-hint">Open post composer</span></span>
+          </a>
+          <button class="share-button" type="button" data-native-share="Instagram Story">
+            <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.2-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></span>
+            <span><span class="share-label">Instagram Story</span><span class="share-hint">Via mobile share sheet</span></span>
+          </button>
+          <button class="share-button" type="button" data-native-share="Facebook Story">
+            <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13.7 22v-9h3l.45-3.5H13.7V7.26c0-1.01.28-1.7 1.74-1.7h1.86V2.43a25 25 0 0 0-2.71-.14c-2.68 0-4.52 1.64-4.52 4.64V9.5H7v3.5h3.07v9h3.63Z"/></svg></span>
+            <span><span class="share-label">Facebook Story</span><span class="share-hint">Via mobile share sheet</span></span>
+          </button>
+          <a class="share-button" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblackhebrewisraeli.github.io%2F" target="_blank" rel="noopener noreferrer">
+            <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.2 3.4a2.2 2.2 0 1 1-4.4 0 2.2 2.2 0 0 1 4.4 0ZM1.2 8h3.7v14.8H1.2V8Zm6 0h3.5v2h.05c.49-.92 1.69-2.4 3.48-2.4 3.72 0 4.41 2.45 4.41 5.63v9.57h-3.7v-8.49c0-2.03-.04-4.64-2.83-4.64-2.83 0-3.26 2.21-3.26 4.49v8.64H7.2V8Z"/></svg></span>
+            <span><span class="share-label">LinkedIn post</span><span class="share-hint">Share with your network</span></span>
+          </a>
+          <button class="share-button" type="button" data-copy-link>
+            <span class="share-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.1-3.1a3 3 0 1 1 4.2 4.2l-2 2a3 3 0 0 1-4.2 0 1 1 0 1 1 1.4-1.4 1 1 0 0 0 1.4 0l2-2a1 1 0 0 0-1.4-1.4L12 13.4a1 1 0 0 1-1.4 0Zm2.8-2.8a1 1 0 0 1 0 1.4l-3.1 3.1a3 3 0 1 1-4.2-4.2l2-2a3 3 0 0 1 4.2 0 1 1 0 1 1-1.4 1.4 1 1 0 0 0-1.4 0l-2 2a1 1 0 0 0 1.4 1.4l3.1-3.1a1 1 0 0 1 1.4 0Z"/></svg></span>
+            <span><span class="share-label">Copy link</span><span class="share-hint">For anywhere else</span></span>
+          </button>
+          <p class="share-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
     </main>
     <footer><span>Built around curiosity — from systems to people.</span><a href="https://github.com/blackhebrewisraeli/blackhebrewisraeli.github.io" target="_blank" rel="noopener noreferrer">Built in public ↗</a></footer>
   </div>
+  <script src="script.js" defer></script>
 </body>
 </html>
