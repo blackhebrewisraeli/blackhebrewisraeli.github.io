@@ -8,7 +8,7 @@ A responsive Bento Grid portfolio for **Shimi Esterkin**, Computer Science stude
 
 - Profile introduction, a direct email link, and links to GitHub, LinkedIn, X, and Instagram
 - Core Systems projects: C-Assembler-Simulator, eBPF/BCC Tracing Lab, and xv6 Docker Environment
-- Product cards for Sprachschule-app and ZeroChart, including demos and repositories
+- Product cards for Sprachschule-app and Popup, including demos and repositories
 - A "What I bring" card: systems, products, and languages & perspective
 - Licenses & certifications shown the way LinkedIn presents them: issuer, issue date, credential ID, skills, and a "Show credential" link to each public verification page
 - Personal travel, music, sociology, and lifestyle section
